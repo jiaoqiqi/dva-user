@@ -1,6 +1,7 @@
 import React from 'react'
 import { Router, Route, Switch, Redirect, routerRedux } from 'dva/router'
 import IndexPage from './routes/IndexPage'
+import App from './routes/App'
 
 import dynamic from 'dva/dynamic' // 路由按需加载
 
@@ -17,12 +18,17 @@ function RouterConfig({ history, app }) {
   })
   return (
     <ConnectedRouter history={history}>
-      <Switch>
-        <Route path="/" exact component={IndexPage} />
-        <Route path="/users" exact component={Users} />
-      </Switch>
+      <App>
+        <Switch>
+          <Route path="/" exact component={IndexPage} />
+          <Route path="/users" exact component={Users} />
+          <Route path="*" render={() => <Redirect to="users" />} />
+        </Switch>
+      </App>
     </ConnectedRouter>
   )
 }
+
+
 
 export default RouterConfig
