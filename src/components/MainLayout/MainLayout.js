@@ -3,9 +3,7 @@ import styles from './MainLayout.css'
 import Header from './Header'
 
 class MainLayout extends Component {
-    // constructor(props) {
-    //     super(props)
-    // }
+
     render() {
         const { children, location } = this.props
         return (

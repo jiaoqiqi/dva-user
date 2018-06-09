@@ -6,8 +6,6 @@ import App from './routes/App'
 
 const { ConnectedRouter } = routerRedux
 
-// import IndexPage from './routes/IndexPage'
-// import Users from './routes/Users'
 
 console.log(dvaRouter)
 function RouterConfig({ history, app }) {

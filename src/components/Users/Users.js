@@ -10,9 +10,9 @@ import styles from './Users.css'
 import { PAGE_SIZE } from '../../constants'
 
 class Users extends Component {
-    // constructor(props) {
-    //     super(props)
-    // }
+    constructor(props) {
+        super(props)
+    }
     createHandler = ({ values }) => {
         this.props.dispatch({
             type: 'users/create',
@@ -43,7 +43,6 @@ class Users extends Component {
     }
     render() {
         const { list: dataSource, loading, total, page: current } = this.props
-        // const { list: dataSource, loading, total } = this.props
         const columns = [
             {
                 title: 'Name',

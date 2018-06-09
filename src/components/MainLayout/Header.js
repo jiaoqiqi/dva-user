@@ -5,9 +5,7 @@ import { Link, routerRedux } from 'dva/router'
 import qs from 'qs'
 
 class Header extends Component {
-    // constructor(props) {
-    //     super(props)
-    // }
+
     menuClick = ({ item, key, keyPath }) => {
         if(key !== '/users') return
         this.props.dispatch(
